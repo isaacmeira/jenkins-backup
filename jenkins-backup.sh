@@ -100,7 +100,7 @@ function main() {
   git add "${DEST_FILE}"
   git commit -m "Backup ${now}"
   git branch -M main
-  git rm origin
+  git remote remove origin
   git remote add origin https://github.com/isaacmeira/jenkins-backups.git
   git push -u origin main
 
