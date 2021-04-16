@@ -92,6 +92,8 @@ function main() {
   cd -
   mv -f "${TMP_TAR_NAME}" "${DEST_FILE}"
 
+  docker cp "${DEST_FILE}" /home/isaacm/dev
+
   cleanup
 
   exit 0
