@@ -98,6 +98,8 @@ function main() {
   git remote rm origin
   git remote add origin https://github.com/isaacmeira/jenkins-backups.git
   git branch -M main
+  git fetch
+  git reset
   git pull origin main
   git add .
   git commit -m "new backup {$now}"
