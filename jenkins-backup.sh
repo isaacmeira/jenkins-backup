@@ -95,11 +95,12 @@ function main() {
   cd $(dirname "${DEST_FILE}")
 
   git init
-   git config --global user.email "fspp@outlook.com"
+  git config --global user.email "fspp@outlook.com"
   git config --global user.name "Isaac Meira"
   git add "${DEST_FILE}"
   git commit -m "Backup ${now}"
   git branch -M main
+  git rm origin
   git remote add origin https://github.com/isaacmeira/jenkins-backups.git
   git push -u origin main
 
