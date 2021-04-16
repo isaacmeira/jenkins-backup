@@ -95,16 +95,13 @@ function main() {
   cd $(dirname "${DEST_FILE}")
 
   git init
-  git remote rm origin
-  git remote add origin https://github.com/isaacmeira/jenkins-backups.git
+  git add README.md
+  git commit -m "first commit"
   git branch -M main
-  git fetch
-  git reset
-  git pull origin main
-  git add .
-  git commit -m "new backup {$now}"
-  git push origin main
+  git remote add origin https://github.com/isaacmeira/jenkins-backups.git
+  git push -u origin main
 
+  
   cleanup
 
   exit 0
