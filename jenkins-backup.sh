@@ -95,8 +95,8 @@ function main() {
   cd $(dirname "${DEST_FILE}")
 
   git init
-  git add README.md
-  git commit -m "first commit"
+  git add "${DEST_FILE}"
+  git commit -m "Backup ${now}"
   git branch -M main
   git remote add origin https://github.com/isaacmeira/jenkins-backups.git
   git push -u origin main
