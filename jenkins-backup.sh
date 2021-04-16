@@ -95,6 +95,12 @@ function main() {
   cd $(dirname "${DEST_FILE}")
 
   git init
+  git remote add origin https://github.com/isaacmeira/jenkins-backups.git
+  git branch -M main
+  git pull 
+  git add .
+  git commit -m "new backup {$now}"
+  git push
 
   cleanup
 
