@@ -97,10 +97,10 @@ function main() {
   git init
   git remote add origin https://github.com/isaacmeira/jenkins-backups.git
   git branch -M main
-  git pull 
+  git pull origin main
   git add .
   git commit -m "new backup {$now}"
-  git push
+  git push origin main
 
   cleanup
 
