@@ -92,7 +92,9 @@ function main() {
   cd -
   mv -f "${TMP_TAR_NAME}" "${DEST_FILE}"
 
-  echo dirname: $(dirname "${DEST_FILE}")
+  cd $(dirname "${DEST_FILE}")
+
+  git init
 
   cleanup
 
